@@ -3,7 +3,7 @@
  *      FILE:     rmd160.h
  *
  *      CONTENTS: Header file for a sample C-implementation of the
- *                RIPEMD-160 hash-function. 
+ *                RIPEMD-160 hash-function.
  *      TARGET:   any computer with an ANSI C compiler
  *
  *      AUTHOR:   Antoon Bosselaers, ESAT-COSIC
@@ -21,7 +21,7 @@
 /********************************************************************/
 
 /* typedef 8 and 32 bit types, resp.  */
-/* adapt these, if necessary, 
+/* adapt these, if necessary,
    for your operating system and compiler */
 typedef    unsigned char        byte;   /* unsigned 8-bit integer */
 typedef    unsigned short       word;   /* unsigned 16-bit integer */
@@ -43,12 +43,12 @@ typedef    uint32_t        dword;  /* unsigned 32-bit integer */
 #define ROL(x, n)        (((x) << (n)) | ((x) >> (32-(n))))
 
 /* the five basic functions F(), G() and H() */
-#define F(x, y, z)        ((x) ^ (y) ^ (z)) 
-#define G(x, y, z)        (((x) & (y)) | (~(x) & (z))) 
+#define F(x, y, z)        ((x) ^ (y) ^ (z))
+#define G(x, y, z)        (((x) & (y)) | (~(x) & (z)))
 #define H(x, y, z)        (((x) | ~(y)) ^ (z))
-#define I(x, y, z)        (((x) & (z)) | ((y) & ~(z))) 
+#define I(x, y, z)        (((x) & (z)) | ((y) & ~(z)))
 #define J(x, y, z)        ((x) ^ ((y) | ~(z)))
-  
+
 /* the ten basic operations FF() through III() */
 #define FF(a, b, c, d, e, x, s)        {\
       (a) += F((b), (c), (d)) + (x);\
@@ -118,7 +118,7 @@ void compress(dword *MDbuf, dword *X);
 
 void MDfinish(dword *MDbuf, byte *strptr, dword lswlen, dword mswlen);
 /*
- *  puts bytes from strptr into X and pad out; appends length 
+ *  puts bytes from strptr into X and pad out; appends length
  *  and finally, compresses the last block(s)
  *  note: length in bits == 8 * (lswlen + 2^32 mswlen).
  *  note: there are (lswlen mod 64) bytes left in strptr.

@@ -4,10 +4,10 @@
  *
  *      CONTENTS: test file for sample C-implementation of
  *                RIPEMD-160 and RIPEMD128
- *        * command line arguments:                                         
- *           filename  -- compute hash code of file read binary     
- *           -sstring  -- print string & hashcode                   
- *           -t        -- perform time trial                        
+ *        * command line arguments:
+ *           filename  -- compute hash code of file read binary
+ *           -sstring  -- print string & hashcode
+ *           -t        -- perform time trial
  *           -x        -- execute standard test suite, ASCII input
  *        * for linkage with rmd128.c: define RMDsize as 128
  *          for linkage with rmd160.c: define RMDsize as 160 (default)
