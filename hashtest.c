@@ -275,7 +275,7 @@ void testsuite (void)
 
 /********************************************************************/
 
-main (int argc, char *argv[])
+int main(int argc, char *argv[])
 /*
  *  main program. calls one or more of the test routines depending
  *  on command line arguments. see the header of this file.
